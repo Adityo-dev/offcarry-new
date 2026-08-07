@@ -1,168 +1,123 @@
-# 🚀 Next.js Starter Template
+# 🛍️ OffCarry - Modern E-Commerce Platform
 
-This repository contains a Next.js template for creating new projects with the latest features and best practices.
+![OffCarry Banner](/public/logo/offcarry.svg)
 
-## Prerequisites
+[![Next.js](https://img.shields.io/badge/Next.js-16.1.0-black?style=for-the-badge&logo=next.js)](https://nextjs.org/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.0-blue?style=for-the-badge&logo=typescript)](https://www.typescriptlang.org/)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-v4.0-38B2AC?style=for-the-badge&logo=tailwind-css)](https://tailwindcss.com/)
+[![pnpm](https://img.shields.io/badge/pnpm-Package_Manager-orange?style=for-the-badge&logo=pnpm)](https://pnpm.io/)
+[![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)](LICENSE)
 
-Before you begin, ensure you have the following installed on your machine:
-
-- [Node.js](https://nodejs.org/)
-- [pnpm](https://pnpm.io/)
-- [Git](https://git-scm.com/)
-
-## Step By Step Instruction For Setup
-
-Follow these steps to quickly initialize your new project from the template repository.
+**OffCarry** is a state-of-the-art, responsive E-Commerce platform built with **Next.js 16 (App Router & Turbopack)**, **TypeScript**, and **Tailwind CSS v4**. It features an elegant shopping experience, modern navigation components, interactive UI elements, and a clean, production-grade architecture.
 
 ---
 
-#### 1\. Clone the Repository
+## ✨ Features
 
-Run the following `git clone` command in your terminal to download the template repository to your local machine.
+- ⚡ **Next.js 16 & Turbopack**: Blazing fast server-side rendering, static generation, and instant HMR.
+- 🎨 **Modern Design System**: Styled with Tailwind CSS v4, Glassmorphism, smooth animations, and curated color palettes.
+- 🧩 **Shadcn UI & Radix UI Primitives**: Accessible UI components including Buttons, Tabs, Sheets, Navigation Menus, and Dialogs.
+- 📱 **Fully Responsive**: Optimized for Mobile, Tablet, and Desktop screen sizes with dedicated Mobile Navigation.
+- ✉️ **Newsletter Integration**: Built-in newsletter subscription component with real-time feedback.
+- 🔒 **Authentication Ready**: Integrated AuthProvider state structure with NextAuth setup.
+- 🧹 **Production-Grade Cleanliness**: Strict ESLint, Prettier, Husky pre-commit hooks, and TypeScript configuration.
 
-```bash
-git clone https://github.com/Binary-Mindz/next-js-project-template.git
+---
+
+## 🛠️ Tech Stack
+
+| Technology | Description |
+| :--- | :--- |
+| **Framework** | [Next.js 16](https://nextjs.org/) (App Router) |
+| **Language** | [TypeScript](https://www.typescriptlang.org/) |
+| **Styling** | [Tailwind CSS v4](https://tailwindcss.com/) |
+| **Icons** | [Lucide React](https://lucide.dev/) |
+| **Form Handling & Validation** | React Hook Form + Zod |
+| **Package Manager** | [pnpm](https://pnpm.io/) |
+| **Linting & Code Quality** | ESLint + Prettier + Husky + lint-staged |
+
+---
+
+## 🚀 Getting Started
+
+Follow these steps to run **OffCarry** locally on your machine:
+
+### Prerequisites
+
+- [Node.js](https://nodejs.org/) (v18.0 or later)
+- [pnpm](https://pnpm.io/) (v9.0 or later)
+
+### Installation
+
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/Adityo-dev/offcarry-new.git
+   cd offcarry-new
+   ```
+
+2. **Install dependencies:**
+   ```bash
+   pnpm install
+   ```
+
+3. **Run the development server:**
+   ```bash
+   pnpm dev
+   ```
+
+4. **Open in browser:**
+   Navigate to [http://localhost:3000](http://localhost:3000) to view the application.
+
+---
+
+## 📜 Available Scripts
+
+In the project directory, you can run:
+
+- `pnpm dev` – Starts the development server with Turbopack.
+- `pnpm build` – Builds the application for production.
+- `pnpm start` – Runs the built production application.
+- `pnpm lint` – Runs ESLint check across all files.
+- `pnpm lint:fix` – Automatically fixes ESLint errors and warnings.
+- `pnpm format` – Checks code formatting with Prettier.
+- `pnpm format:fix` – Formats code with Prettier.
+- `pnpm typecheck` – Runs TypeScript compiler check (`tsc --noEmit`).
+
+---
+
+## 📁 Project Structure
+
+```text
+offcarry-new/
+├── public/                     # Static assets (logos, images, icons)
+├── scripts/                    # CI/CD and pre-commit hook scripts
+├── src/
+│   ├── app/                    # Next.js App Router (pages & layouts)
+│   │   ├── (auth)/             # Authentication routes
+│   │   ├── (main)/             # Main application layout & pages
+│   │   │   └── (home)/         # Home page components
+│   │   ├── dashboard/          # Admin / User dashboard routes
+│   │   ├── globals.css         # Global Tailwind CSS styles
+│   │   └── layout.tsx          # Root layout & metadata
+│   ├── components/
+│   │   ├── main/               # Main layout components (Navbar, Footer, Newsletter)
+│   │   └── ui/                 # Reusable UI components (Button, Sheet, Tabs, etc.)
+│   ├── lib/                    # Utility functions (cn helper, etc.)
+│   └── providers/              # Context providers (Auth, Theme)
+├── eslint.config.mjs           # ESLint configuration
+├── next.config.ts              # Next.js configuration
+├── package.json                # Dependencies and scripts
+└── tsconfig.json               # TypeScript configuration
 ```
 
 ---
 
-#### 2\. Rename the Directory
+## 👤 Author
 
-Rename the newly cloned directory from `next-js-project-template` to your desired **project name** (e.g., `my-new-app`).
-
-```bash
-mv next-js-project-template your-project-name
-```
+Developed by **[Aditto Dev Barmon (Adityo-dev)](https://github.com/Adityo-dev)**.
 
 ---
 
-#### 3\. Navigate to the Project Directory
+## 📄 License
 
-Change your current directory to the new project folder.
-
-```bash
-cd your-project-name
-```
-
----
-
-#### 4\. Remove the Existing `.git` Folder
-
-Since this is a new project based on a template, you should remove the template's `.git` history folder so you can initialize your own new repository.
-
-##### 1. Using Git Bash
-
-```bash
-rm -rf .git
-```
-
-##### 2. Using Command Prompt
-
-```cmd
-rmdir /s /q .git
-```
-
-##### 3. Using PowerShell
-
-You can also use **PowerShell** to remove the `.git` folder.
-
-```powershell
-Remove-Item -Recurse -Force .git
-```
-
-##### 4. Using File Explorer (Manual Way)
-
-> _Steps:_
-
-1. Open **File Explorer** and navigate to your project directory.
-2. **Show hidden files** (since `.git` is a hidden folder):
-   - Click on the **"View"** tab at the top.
-   - Check the box next to **Hidden items**.
-
-3. Find the `.git` folder and delete it like any other folder.
-
-#### 5\. Initialize a New Git Repository (Next Step)
-
-After removing the old history, initialize a fresh Git repository for your new project.
-
-```bash
-git init
-```
-
----
-
-#### 6\. Check Package Versions
-
-Run the following command to see all available updates. This command checks and lists outdated dependencies in your project, but it does not modify your package.json yet.
-
-```bash
-pnpm dlx npm-check-updates
-```
-
-#### 7\. Update All Packages to the Latest Version
-
-To update all dependencies to their latest versions, run the following command. This will update your package.json to the latest versions of all dependencies, and then install those updated versions into your project.
-
-```bash
-pnpm run update-deps
-```
-
-> **_Congratulations You have successfully completed all the steps!! You are good to go. 🚀_**
-
-## Now, you can start building your projects with the latest dependencies.
-
-<p style="color: red;"><strong>Note:</strong> The following steps are not required. They are just for specific version controlling. You can access the full documentation <a href="https://www.npmjs.com/package/npm-check-updates" target="_blank">here</a>.</p>
-
-### Semantic Versioning (Optional)
-
-In semantic versioning, the version number consists of three parts: `MAJOR.MINOR.PATCH`.
-
-- **PATCH** (Rightmost number) refers to bug fixes.
-- **MINOR** (Middle number) refers to backwards-compatible new features.
-- **MAJOR** (Leftmost number) refers to breaking changes or new features that are not backwards-compatible.
-
----
-
-##### 1. Update Patches version.
-
-Start by updating all patches. Patches are bug fixes, and they are usually safe and shouldn't break anything in your project.
-
-Run the following command to update patches:
-
-```bash
-pnpm dlx npm-check-updates -u -t patch
-```
-
-After updating, run `pnpm install` to apply the changes. Test your application to ensure everything is working. If everything is fine, commit the changes.
-
----
-
-##### 2. Update Minor Versions
-
-Next, update all minor versions. Minor updates generally add new features in a backwards-compatible way, so they should not break your code.
-
-Run the following command to update minor versions:
-
-```bash
-pnpm dlx npm-check-updates -u -t minor
-```
-
-After updating, run `pnpm install` to apply the changes. Test your application to ensure everything is working. If everything is fine, commit the changes.
-
----
-
-##### 3. Update Major Versions
-
-Finally, update all major versions. Major updates may introduce breaking changes, so it's important to check the release notes for each update before proceeding. Update each major version in a separate commit to ensure you can easily revert if necessary.
-
-To update a specific package (e.g., `node-fetch`), run:
-
-```bash
-pnpm dlx npm-check-updates -u -f package_name
-```
-
-After updating, run `pnpm install` to apply the changes. Test your application to ensure everything is working. If everything is fine, commit the changes.
-
-Repeat this for each package that needs a major update.
-
----
+This project is licensed under the [MIT License](LICENSE).
